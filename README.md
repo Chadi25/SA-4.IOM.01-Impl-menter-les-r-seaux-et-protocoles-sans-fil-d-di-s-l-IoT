@@ -68,6 +68,6 @@ Nous encourageons les contributions pour améliorer et étendre les fonctionnali
 
 ## Licence
 
-Ce projet est distribué sous la licence MIT. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
+Ce projet est distribué sous la licence IOM DATACENTER. Veuillez consulter le fichier `LICENSE` pour plus d'informations.
 
 
