@@ -95,7 +95,7 @@ void readAndPublishMovement() {
     Serial.println("True"); // Afficher un message de débogage
     
     if (client.connected()) {
-      client.publish("datacenter/sensors/mouvement", "True");
+      client.publish("datacenter/sensors/mouvement", "1");
     } else {
       Serial.println("Erreur : Non connecté au broker MQTT !");
     }
@@ -105,7 +105,7 @@ void readAndPublishMovement() {
     digitalWrite(ledPin, LOW); // Éteindre la LED si aucun mouvement n'est détecté
     
     if (client.connected()) {
-      client.publish("datacenter/sensors/mouvement", "False");
+      client.publish("datacenter/sensors/mouvement", "0");
     } else {
       Serial.println("Erreur : Non connecté au broker MQTT !");
     }
