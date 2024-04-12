@@ -146,10 +146,10 @@ void readAndPublishMovement() {
   
   if (pirState == HIGH) { // Si le capteur détecte un mouvement
     digitalWrite(ledPin, HIGH); // Allumer la LED
-    Serial.println("True"); // Afficher un message de débogage
+    Serial.println("1"); // Afficher un message de débogage
     
     if (client.connected()) {
-      client.publish("technique/sensors/mouvement", "True");
+      client.publish("technique/sensors/mouvement", "1");
     } else {
       Serial.println("Erreur : Non connecté au broker MQTT !");
     }
@@ -159,11 +159,11 @@ void readAndPublishMovement() {
     digitalWrite(ledPin, LOW); // Éteindre la LED si aucun mouvement n'est détecté
     
     if (client.connected()) {
-      client.publish("technique/sensors/mouvement", "False");
+      client.publish("technique/sensors/mouvement", "0");
     } else {
       Serial.println("Erreur : Non connecté au broker MQTT !");
     }
-    Serial.println("False"); //
+    Serial.println("0"); //
   }
 }
 
